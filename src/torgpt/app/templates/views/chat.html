@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="box">
-    <form method="POST" action="/chat">
+    <form method="POST" action="/chat/">
         <div class="field">
             <label class="label">Enter Prompt</label>
             <div class="control">
@@ -14,13 +14,12 @@
         <button class="button is-primary">Send</button>
     </form>
 </div>
-<div id="response">
-    {% if response %}
-    <article class="message is-info">
-        <div class="message-body">
-            {{ response }}
-        </div>
-    </article>
-    {% endif %}
-</div>
+
+{% if response %}
+<article class="message is-info">
+    <div class="message-body">
+        {{ response }}
+    </div>
+</article>
+{% endif %}
 {% endblock %}
