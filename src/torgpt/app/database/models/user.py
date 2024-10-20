@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String
 from torgpt.app.database.db import Base
-from passlib.hash import bcrypt
+from bcrypt import bcrypt
 
 class User(Base):
     __tablename__ = "users"
@@ -9,4 +9,5 @@ class User(Base):
     hashed_password = Column(String)
 
     def verify_password(self, password: str) -> bool:
-        return bcrypt.verify(password, self.hashed_password)
+        return bcrypt.checkpw(password.encode('utf-8'), self.hashed_password.encode('utf-8'))
+    
