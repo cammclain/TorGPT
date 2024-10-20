@@ -6,3 +6,5 @@ pydantic
 pydantic-settings
 pydantic-core
 sqlalchemy
+python-dotenv
+bcrypt

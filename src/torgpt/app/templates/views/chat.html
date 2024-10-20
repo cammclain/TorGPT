@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Chat{% endblock %}
+
+{% block content %}
+<div class="box">
+    <form method="POST" action="/chat">
+        <div class="field">
+            <label class="label">Enter Prompt</label>
+            <div class="control">
+                <textarea class="textarea" name="prompt" required></textarea>
+            </div>
+        </div>
+        <button class="button is-primary">Send</button>
+    </form>
+</div>
+<div id="response">
+    {% if response %}
+    <article class="message is-info">
+        <div class="message-body">
+            {{ response }}
+        </div>
+    </article>
+    {% endif %}
+</div>
+{% endblock %}
