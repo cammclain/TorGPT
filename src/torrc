@@ -1,0 +1,2 @@
+HiddenServiceDir /var/lib/tor/ollama_dashboard/
+HiddenServicePort 80 127.0.0.1:8000

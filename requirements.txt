@@ -1,0 +1,8 @@
+ollama
+fastapi
+uvicorn
+jinja2
+pydantic
+pydantic-settings
+pydantic-core
+sqlalchemy
